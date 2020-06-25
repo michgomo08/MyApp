@@ -1,17 +1,61 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Lector
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="animated fadeIn fast content-animation-config">
+    <ion-grid>
+        <ion-row class="ion-justify-content-center ion-margin-top">
+            <ion-col>
+                <ion-item>
+                    <ion-thumbnail class="thumbnail" *ngIf="IS_LOADING === true" item-left>
+                        <img [src]="CARGANDO" class="android hydrated" />
+                    </ion-thumbnail>
+                    <ion-input [class.connected]="CONECTADO" [class.disconnected]="!CONECTADO" *ngIf="IS_LOADING === false"> {{INPUT_ESTADO}} </ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+        <div class="divider "></div>
+
+        <ion-row class="ion-justify-content-center ion-margin-top ">
+            <ion-col size="100% ">
+                <div>
+                    <!-- Default -->
+                    <ion-button [disabled]="BTN_CONECTAR_DISABLED" (click)="conectarDesconectar($event)">{{BTN_CONECTAR}}</ion-button>
+                </div>
+            </ion-col>
+        </ion-row>
+
+
+        <ion-row class="ion-justify-content-center ion-margin-top full-row-size ">
+            <ion-col>
+                <ion-item class="ion-text-center ">
+                    <ion-label class="ion-text-center " class="lbl-titulo " color="primary ">Información del Lector</ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+
+
+    <ion-item>
+        <ion-label>Marca:</ion-label>
+        <ion-input class="ion-text-end "></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Modelo:</ion-label>
+        <ion-input class="ion-text-end "></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>ID:</ion-label>
+        <ion-input class="ion-text-end "></ion-input>
+    </ion-item>
+
 </ion-content>

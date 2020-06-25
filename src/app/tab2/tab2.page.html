@@ -1,17 +1,60 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Autenticación
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="animated fadeIn fast content-animation-config">
+    <ion-grid>
+        <ion-row class="ion-justify-content-center ion-margin-top">
+            <ion-col>
+                <div>
+                    <ion-item>
+                        <ion-input inputmode="number" [type]="PASSWORD_INPUT_TYPE" (keyup.enter)="validarPIN(PIN, $event)" [(ngModel)]="PIN" placeholder="PIN"></ion-input>
+                        <ion-icon (click)="hideShowPassword()" [name]="PASSWORD_INPUT_ICON" slot="end"></ion-icon>
+                    </ion-item>
+                </div>
+            </ion-col>
+        </ion-row>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+        <ion-row class="ion-justify-content-center ion-margin-top">
+            <ion-col>
+                <div>
+
+                    <ion-button expand="block" (click)="validarPIN(PIN, $event)">Validar</ion-button>
+
+                </div>
+            </ion-col>
+        </ion-row>
+
+
+        <ion-row class="ion-justify-content-center ion-margin-top full-row-size">
+            <ion-col>
+                <ion-item class="ion-text-center">
+                    <ion-label class="ion-text-center" class="lbl-tittle" color="primary">Información del Certificado</ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+
+
+    <ion-item>
+        <ion-label>Nombre:</ion-label>
+        <ion-input class="ion-text-end"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Emitido Por:</ion-label>
+        <ion-input class="ion-text-end"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Fecha Vencimiento:</ion-label>
+        <ion-input class="ion-text-end"></ion-input>
+    </ion-item>
+
 </ion-content>

@@ -1,0 +1,40 @@
+{
+  "_from": "git+https://github.com/michgomo08/MyLectorPlugin.git",
+  "_id": "cordova-my-lector-plugin@0.0.1",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-my-lector-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/michgomo08/MyLectorPlugin.git",
+    "rawSpec": "https://github.com/michgomo08/MyLectorPlugin.git",
+    "saveSpec": "git+https://github.com/michgomo08/MyLectorPlugin.git",
+    "fetchSpec": "https://github.com/michgomo08/MyLectorPlugin.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/michgomo08/MyLectorPlugin.git#93d5c4ab442e5f63ca6ee5c4282b4b090c5c5995",
+  "_spec": "https://github.com/michgomo08/MyLectorPlugin.git",
+  "_where": "C:\\Users\\mgomez\\Documents\\Orbe\\Todo\\FEITIAN\\myApp",
+  "author": "",
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-my-lector-plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Plugin para leer lector.",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "ISC",
+  "name": "cordova-my-lector-plugin",
+  "version": "0.0.1"
+}
